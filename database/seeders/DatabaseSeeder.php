@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Admin;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -22,10 +23,9 @@ class DatabaseSeeder extends Seeder
             'phone_number'=>'0786312121',
             'password'=> bcrypt('user1'),
         ]);
-        User::factory()->create([
+        Admin::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
-            'phone_number'=>'0786312121',
             'password'=> bcrypt('admin1'),
         ]);
     }
