@@ -21,7 +21,16 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
             'phone_number'=>'0786312121',
+            'gender' => 'male', 
             'password'=> bcrypt('user1'),
+        ]);
+        User::factory()->create([
+            'admission_number'=>'151324',
+            'name' => 'Ann Terry',
+            'email' => 'ann@gmail.com',
+            'phone_number'=>'0786213131',
+            'gender' => 'female', 
+            'password'=> bcrypt('user2'),
         ]);
         Admin::factory()->create([
             'name' => 'Admin',

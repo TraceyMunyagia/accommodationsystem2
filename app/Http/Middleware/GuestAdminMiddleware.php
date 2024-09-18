@@ -21,7 +21,7 @@ class GuestAdminMiddleware
             return redirect()->route('admin.home');
         }
         if(auth::check() && !auth::user()->is_admin){
-            return redirect()->route('user.home');
+            return redirect()->route('home');
         }
         return $next($request);
     }

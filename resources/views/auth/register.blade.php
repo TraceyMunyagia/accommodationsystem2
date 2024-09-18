@@ -51,6 +51,22 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
+                        <div class="col-md-6">
+                        <select id="gender" name="gender" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                        </div>
+                        @error('gender')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                        </div>
+
                         
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>

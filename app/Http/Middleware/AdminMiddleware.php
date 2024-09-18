@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminBookingController;
 
 
 class AdminMiddleware
@@ -24,5 +25,7 @@ class AdminMiddleware
         
             return $next($request);
         }
+
+       
         
 }
